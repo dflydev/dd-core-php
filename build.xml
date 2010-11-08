@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dd-core" basedir="." default="main">
+	<target name="main" />
+	<target name="test">
+		<mkdir dir="build/logs" />
+		<phpunit printsummary="true" haltonfailure="true">
+			<formatter todir="build/logs" type="xml" />
+			<batchtest>
+				<fileset dir="./tests/">
+					<include name="*.php" />
+				</fileset>
+			</batchtest>
+		</phpunit>
+	</target>
+</project>
